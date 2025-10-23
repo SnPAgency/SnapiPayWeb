@@ -166,6 +166,10 @@ body {
     margin-top: 200px;
 }
 
+.section3{
+    margin-top: 150px;
+}
+
 .title{
     margin-bottom: 80px;
     text-align: center;
@@ -283,6 +287,93 @@ body {
 .card2{
     text-align: center;
 }
+.moon-bg{
+    height: 400px;
+    background:  linear-gradient(rgba(12, 12, 79, 0.3), rgba(12, 12, 79, 0.3)),
+    url('../assets/moon.png');
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 0px 30px;
+}
+
+.section3{
+    margin-bottom: 100px;
+}
+
+.title2{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.newsletter-container {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .email-input {
+    flex: 1;
+    padding: 14px 18px;
+    background: rgba(13, 13, 13, 1);
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .email-input::placeholder {
+    color: #6b7280;
+  }
+
+  .email-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  }
+
+  .subscribe-btn {
+    padding: 14px 32px;
+    background: radial-gradient(66.36% 50% at 50.14% 0%, #927DE8 0%, #755AE2 100%);
+    border: 1px solid #927DE8;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Manrope;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .subscribe-btn:hover {
+    background: #927DE8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+  }
+
+  .subscribe-btn:active {
+    transform: translateY(0);
+  }
+  .newsletter{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+
+
+
+
 
 
 
@@ -382,6 +473,10 @@ body {
       .section2{
         margin-top: 50px;
       }
+
+      .section3{
+        margin-top: 100px;
+      }
     
 
       .title h2{
@@ -448,6 +543,12 @@ body {
     .section2 .title{
         margin-bottom: 100px;
     }
+
+    .newsletter{
+        display: block;
+        margin-top: -50px;
+      }
+    
 }
 
 
@@ -585,5 +686,20 @@ body {
         height: auto;
         width: 150px;
     }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .email-input,
+      .subscribe-btn {
+        width: 100%;
+      }
+
+      .newsletter{
+        display: block;
+        margin-top: -20px;
+      }
      
 }
