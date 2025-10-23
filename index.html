@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnappiPay</title>
-    <script type="module" crossorigin src="/SnapiPayWeb/assets/index-2Je08wwJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/SnapiPayWeb/assets/index-Bgb6YyYa.css">
+    <script type="module" crossorigin src="/SnapiPayWeb/assets/index-CAIofDb3.js"></script>
+    <link rel="stylesheet" crossorigin href="/SnapiPayWeb/assets/index-8crrTfTo.css">
   </head>
   <body>
 
@@ -162,5 +162,55 @@
     </div>
 
    </section>
+
+   <section class="section3">
+    <div class="container">
+            <div class="row moon-bg">
+                <div class="col-lg-6 col-md-12">
+                    <div class="title title2">
+                        <div>
+                            <h6 style="text-align: left;">stay updated</h6>
+                            <h2 style="text-align: left;">Join our mailing list</h2>
+                            <p style="width: 100%; text-align: left;">Stay ahead in the crypto payment revolution. Sign up for exclusive updates, early access to features, and tips on simplifying your transactions with Snappipay.</p>
+                        </div>
+  
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="newsletter">
+                        <div class="newsletter-container">
+                            <form class="newsletter-form" onsubmit="handleSubmit(event)">
+                              <input 
+                                type="email" 
+                                class="email-input" 
+                                placeholder="Enter your email address" 
+                                required
+                              >
+                              <button type="submit" class="subscribe-btn">Subscribe</button>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+   </section>
+
+   <footer>
+    footer
+   </footer>
+
+
+
+
+
+
+   <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('.email-input').value;
+      alert(`Thank you for subscribing with: ${email}`);
+      e.target.reset();
+    }
+  </script>
   </body>
 </html>
