@@ -1,0 +1,33 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ii_587_671)">
+<rect width="40" height="40" rx="20" fill="url(#paint0_radial_587_671)"/>
+<rect width="40" height="40" rx="20" fill="url(#paint1_linear_587_671)" fill-opacity="0.5"/>
+<path d="M27.8727 22.375H11.5625C11.4594 22.375 11.375 22.4594 11.375 22.5625V23.9688C11.375 24.0719 11.4594 24.1562 11.5625 24.1562H25.7469L22.3648 28.4453C22.2687 28.5672 22.3555 28.75 22.5125 28.75H24.2117C24.3266 28.75 24.4344 28.6984 24.507 28.607L28.4633 23.5891C28.85 23.0969 28.5008 22.375 27.8727 22.375ZM28.4375 16.8438H14.2531L17.6352 12.5547C17.7312 12.4328 17.6445 12.25 17.4875 12.25H15.7883C15.6734 12.25 15.5656 12.3016 15.493 12.393L11.5367 17.4109C11.15 17.9031 11.4992 18.625 12.125 18.625H28.4375C28.5406 18.625 28.625 18.5406 28.625 18.4375V17.0312C28.625 16.9281 28.5406 16.8438 28.4375 16.8438Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_ii_587_671" x="-2" y="-4" width="44" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-2" dy="-4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.219608 0 0 0 0 0.792157 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_587_671"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.219608 0 0 0 0 0.792157 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_587_671" result="effect2_innerShadow_587_671"/>
+</filter>
+<radialGradient id="paint0_radial_587_671" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 20.5) rotate(90) scale(24)">
+<stop stop-color="#6366F1"/>
+<stop offset="1" stop-color="#4338CA"/>
+</radialGradient>
+<linearGradient id="paint1_linear_587_671" x1="10.5" y1="4.5" x2="32" y2="39.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#818CF8"/>
+<stop offset="1" stop-color="#312E81"/>
+</linearGradient>
+</defs>
+</svg>
