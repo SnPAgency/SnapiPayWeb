@@ -16,13 +16,13 @@
         <div class="container nav1">
           <a class="navbar-brand" href="#"><img src="./assets/Logo.svg" alt="Logo"/></a>
           
-          <button class="navbar-toggler navbar-toggler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <button class="navbar-toggler navbar-toggler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> -->
           
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+          <div class="" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">About</a>
               </li>
               <li class="nav-item">
@@ -30,11 +30,12 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-disabled="true">Help</a>
-              </li>
+              </li> -->
+               <button class="btn-started btn-started1">Get Started</button>
             </ul>
-            <ul class="d-flex mb-2 mb-lg-0">
+            <!-- <ul class="d-flex mb-2 mb-lg-0">
               <button class="btn-started btn-started1">Get Started</button>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </nav>
@@ -45,7 +46,17 @@
                 <div>
                     <h1>The Future of Payments,<br/> Crypto to Cash, Simplified</h1>
                     <p>Whether you're shopping, paying bills, or running a business, Snappipay provides a smooth, reliable solution to convert your crypto into fiat instantly.</p>
-                    <button class="btn-started">Get Started</button>
+                    <div class="newsletter-container form1">
+                      <form class="newsletter-form " onsubmit="handleSubmit(event)">
+                        <input 
+                          type="email" 
+                          class="email-input" 
+                          placeholder="Enter your email address" 
+                          required
+                        >
+                        <button type="submit" class="subscribe-btn">Join our waitlist</button>
+                      </form>
+                    </div>
                     <div class="multichain-logos">
                         <h6>Multichain. Built for everyone.</h6>
                         <div class="logos">
@@ -61,7 +72,7 @@
              
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" >
               <div class="app-mockup">
                 <img class="img-fluid" src="./assets/Mockuuups Free Transparent iPhone Air Mockup 1.svg" alt="App Mockup"/>
               </div>
@@ -107,62 +118,66 @@
     </div>
    </section>
 
-   <section class="section2">
-    <div class="title">
+   <section class="section2 scroll-section">
+    <div class="scroll-content">
+      <div class="title">
         <h6>starting from nigeria and kenya</h6>
         <h2>Our Target Market</h2>
         <p>Snappipay is poised to transform crypto payments in high-growth African markets, starting with Nigeria and Kenya</p>
-    </div>
-
-    <div class="container">
-        
-        <div class="row mb-3 mb-md-4 mb-lg-5">
-            <div class="col-md-6 col-sm-6">
-                <div class="flag">
-                    <img class="img-fluid" src="./assets/Flag_map_of_Nigeria.svg 1.svg" alt="Nig Flag"/>
-                </div>
+      </div>
+      <div class="container">
+        <!-- Row 1 -->
+        <div class="row mb-3 mb-md-4 mb-lg-5 scroll-item" data-index="0">
+          <div class="col-md-6 col-sm-6">
+            <div class="flag">
+              <img class="img-fluid" src="./assets/Flag_map_of_Nigeria.svg 1.svg" alt="Nig Flag"/>
             </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="flagCard">
-                    <div>
-                        <h3>For Nigeria</h3>
-                        <p>In Nigeria, we integrate seamlessly with Paystack to enable retail businesses and crypto holders to process fast, secure transactions amid rising digital asset adoption.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-3 pt-md-4 pt-lg-5 mb-3 mb-md-4 mb-lg-5">
-            <div class="col-md-6 col-sm-6 order-2 order-sm-1">
-             <div class="flagCard">
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="flagCard">
               <div>
-               <h3>For Kenya</h3>
-               <p>In Kenya, our integrations with Mpesa and Airtel Money make it simple for consumers and enterprises to bridge crypto and fiat, supporting everyday payments in a region leading mobile money innovation.</p>
+                <h3>For Nigeria</h3>
+                <p>In Nigeria, we integrate seamlessly with Paystack to enable retail businesses and crypto holders to process fast, secure transactions amid rising digital asset adoption.</p>
               </div>
-             </div>
             </div>
-            <div class="col-md-6 col-sm-6 order-1 order-sm-2">
-             <div class="flag">
-              <img class="img-fluid" src="./assets/vecteezy_kenya-flag-map-the-flag-of-the-country-in-the-form-of_6636801 1.svg" alt="Nig Flag"/>
-             </div>
-            </div>
-           </div>
-
-           <div class="row pt-3 pt-md-4 pt-lg-5">
-            <div class="col">
-                <div class="card card2">
-                    <h3>Built for Everyone</h3>
-                    <p>Whether you're a retail shop owner expanding payment options or an individual holder looking for user-friendly spending tools, Snappipay delivers tailored solutions to drive mass-market crypto integration in these dynamic economies.</p>
-            </div>
-           </div>
-    </div>
-    <div class="row pt-3 text-center">
-        <div class="map">
-            <img class="img-fluid" src="./assets/Vector.svg" style="width: 100%;"/>
+          </div>
         </div>
+  
+        <!-- Row 2 -->
+        <div class="row pt-3 pt-md-4 pt-lg-5 mb-3 mb-md-4 mb-lg-5 scroll-item" data-index="1">
+          <div class="col-md-6 col-sm-6 order-2 order-sm-1">
+            <div class="flagCard">
+              <div>
+                <h3>For Kenya</h3>
+                <p>In Kenya, our integrations with Mpesa and Airtel Money make it simple for consumers and enterprises to bridge crypto and fiat, supporting everyday payments in a region leading mobile money innovation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 order-1 order-sm-2">
+            <div class="flag">
+              <img class="img-fluid" src="./assets/vecteezy_kenya-flag-map-the-flag-of-the-country-in-the-form-of_6636801 1.svg" alt="Nig Flag"/>
+            </div>
+          </div>
+        </div>
+  
+    
+       
+  
+        <!-- Row 3 -->
+        <div class="row pt-3 text-center scroll-item" data-index="2">
+          <div class="col">
+            <div class="card card2">
+              <h3>Built for Everyone</h3>
+              <p>Whether you're a retail shop owner expanding payment options or an individual holder looking for user-friendly spending tools, Snappipay delivers tailored solutions to drive mass-market crypto integration in these dynamic economies.</p>
+            </div>
+          </div>
+          <div class="map">
+            <img class="img-fluid" src="./assets/Vector.svg" style="width: 100%;"/>
+          </div>
+        </div>
+      </div>
     </div>
-
-   </section>
+  </section>
 
    <section class="section3">
     <div class="container">
@@ -187,7 +202,7 @@
                                 placeholder="Enter your email address" 
                                 required
                               >
-                              <button type="submit" class="subscribe-btn">Subscribe</button>
+                              <button type="submit" class="subscribe-btn">Join our waitlist</button>
                             </form>
                           </div>
                     </div>
@@ -257,6 +272,82 @@
       alert(`Thank you for subscribing with: ${email}`);
       e.target.reset();
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const section = document.querySelector('.scroll-section');
+  const items = document.querySelectorAll('.scroll-item');
+  const totalItems = items.length;
+  
+  // Function to check if mobile
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+  
+  // Exit early on mobile
+  if (isMobile()) {
+    return;
+  }
+  
+  let currentIndex = 0;
+  
+  function updateItems() {
+    // Double check - don't run on mobile
+    if (isMobile()) return;
+    
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top;
+    const sectionHeight = rect.height;
+    const viewportHeight = window.innerHeight;
+    
+    if (sectionTop <= 0 && sectionTop > -(sectionHeight - viewportHeight)) {
+      const progress = Math.abs(sectionTop) / (sectionHeight - viewportHeight);
+      const newIndex = Math.min(
+        Math.floor(progress * totalItems),
+        totalItems - 1
+      );
+      
+      if (newIndex !== currentIndex) {
+        items.forEach((item, index) => {
+          item.classList.remove('active', 'previous', 'next');
+          
+          if (index === newIndex) {
+            item.classList.add('active');
+          } else if (index < newIndex) {
+            item.classList.add('previous');
+          } else {
+            item.classList.add('next');
+          }
+        });
+        
+        currentIndex = newIndex;
+      }
+    } else if (sectionTop > 0) {
+      items.forEach(item => item.classList.remove('active', 'previous', 'next'));
+      items[0].classList.add('active');
+      currentIndex = 0;
+    }
+  }
+  
+  window.addEventListener('scroll', updateItems);
+  updateItems();
+  
+  // Handle window resize
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (isMobile()) {
+        // Remove all animation classes on mobile
+        items.forEach(item => {
+          item.classList.remove('active', 'previous', 'next');
+        });
+      } else {
+        // Reinitialize on desktop
+        updateItems();
+      }
+    }, 250);
+  });
+});
   </script>
   </body>
 </html>

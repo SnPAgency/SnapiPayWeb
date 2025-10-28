@@ -29,6 +29,7 @@ body {
     background-size: 70% 150%;
     height: auto;
     padding-top: 150px;
+    padding-bottom: 100px;
     position: relative;
     // -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
     // mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
@@ -53,7 +54,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 50px;
-    margin-top: -7px;
+    margin-top: 10px;
     backdrop-filter: blur(8px);
   }
 
@@ -111,17 +112,17 @@ body {
     color: #D1D5DB;
   }
 
-  .headerText button{
-    padding: 10px 50px;
-  }
+//   .headerText button{
+//     padding: 10px 50px;
+//   }
 
   .app-mockup{
     text-align: right;
   }
-  .app-mockup img{
-    width: 400px;
-    height: auto;
-  }
+  // .app-mockup img{
+  //   width: 400px;
+  //   height: auto;
+  // }
 
   .multichain-logos{
     margin-top: 50px;
@@ -159,11 +160,11 @@ body {
 }
 
 .section2{
-    margin-top: 150px;
+    // margin-top: 150px;
 }
 
 .section1{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .section3{
@@ -471,7 +472,58 @@ body {
     color: #fff;
   }
 
+
+/* Section with extra height for scrolling */
+.scroll-section {
+    position: relative;
+    height: 200vh; /* 4x viewport height for 4 rows */
+  }
   
+  /* Fixed content container */
+  .scroll-content {
+    position: sticky;
+    top: 0;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0; /* Adjust based on navbar height */
+  }
+  
+  /* Hide all rows initially */
+  .scroll-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Show active row */
+  .scroll-item.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+  }
+  
+  /* Previous row (fade out upward) */
+  .scroll-item.previous {
+    opacity: 0;
+    transform: translateY(-50px);
+    position: absolute;
+  }
+  
+  /* Title stays visible */
+  .scroll-content .title {
+    margin-bottom: 50px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+   
+  }
 
 
 
@@ -500,11 +552,21 @@ body {
         width: 80%;
         margin: auto;
     }
+
+    .app-mockup img{
+        width: 300px;
+        height: auto;
+      }
    
 }
 
 
 @media (max-width: 991.98px) {
+
+    .container{
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        }
     .nav1{
         border-radius: 30px;
     }
@@ -560,19 +622,19 @@ body {
     }
 
     .app-mockup img{
-        width: 300px;
+        width: 200px;
         height: auto;
       }
       .app-mockup{
         text-align: right;
-        margin-top: 40px;
+        margin-top: 10px;
       }
       .section1{
-        margin-top: 150px;
+        margin-top: 50px;
       }
 
       .section2{
-        margin-top: 50px;
+        // margin-top: 50px;
       }
 
       .section3{
@@ -649,6 +711,27 @@ body {
         display: block;
         margin-top: -50px;
       }
+
+      .btn-started1{
+        margin-top: 7px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .email-input,
+      .subscribe-btn {
+        width: 100%;
+      }
+
+      .newsletter{
+        display: block;
+        margin-top: -20px;
+      }
+
+      
     
 }
 
@@ -664,7 +747,7 @@ body {
        
       }
       .section1{
-        margin-top: 150px;
+        margin-top: 50px;
       }
 
       .section2{
@@ -737,6 +820,34 @@ body {
         text-align: right;
       }
 
+      .scroll-section {
+        height: auto !important; /* Normal height */
+        position: relative;
+      }
+      
+      .scroll-content {
+        position: relative !important; /* Not sticky */
+        height: auto !important;
+        overflow: visible;
+        padding: 40px 0;
+      }
+      
+      .scroll-item {
+        opacity: 1 !important; /* All visible */
+        transform: none !important;
+        transition: none !important;
+        position: relative !important;
+      }
+      
+      /* Remove all animation classes on mobile */
+      .scroll-item.active,
+      .scroll-item.previous,
+      .scroll-item.next {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      
+
      
 }
 
@@ -749,6 +860,8 @@ body {
     .nav1{
         margin-right: calc(var(--bs-gutter-x) * 1.0);
         margin-left: calc(var(--bs-gutter-x) * 1.0);
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .navbar-brand img{
         height: auto;
@@ -804,23 +917,10 @@ body {
         width: 150px;
     }
 
-    .newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .email-input,
-      .subscribe-btn {
-        width: 100%;
-      }
-
-      .newsletter{
-        display: block;
-        margin-top: -20px;
-      }
+   
 
       .section1{
-        margin-top: 100px;
+        margin-top: 30px;
       }
 
       .section2{
@@ -829,6 +929,9 @@ body {
 
       .section2 .title {
         margin-bottom: 70px;
+    }
+    .btn-started1{
+        margin-top: 7px;
     }
      
 }
