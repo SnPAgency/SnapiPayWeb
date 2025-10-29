@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnappiPay</title>
-    <script type="module" crossorigin src="/SnapiPayWeb/assets/index-BPk99bQJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/SnapiPayWeb/assets/index-BemCpq8w.css">
+    <script type="module" crossorigin src="/SnapiPayWeb/assets/index-DZb6OU9a.js"></script>
+    <link rel="stylesheet" crossorigin href="/SnapiPayWeb/assets/index-Caff0kY9.css">
   </head>
   <body>
 
@@ -283,15 +283,7 @@
   const items = document.querySelectorAll('.scroll-item');
   const totalItems = items.length;
   
-  // Check if mobile
-  const isMobile = window.innerWidth <= 768;
-  
-  if (isMobile) {
-    // Show all items on mobile
-    items.forEach(item => item.classList.add('active'));
-    return;
-  }
-  
+  // Remove the mobile check - let it work on all devices
   let currentIndex = 0;
   
   function updateItems() {
@@ -326,6 +318,11 @@
         
         currentIndex = newIndex;
       }
+    } else if (sectionTop > 0) {
+      // Before section is reached, show first item
+      items.forEach(item => item.classList.remove('active', 'previous'));
+      items[0].classList.add('active');
+      currentIndex = 0;
     }
   }
   
