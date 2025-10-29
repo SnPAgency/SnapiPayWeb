@@ -31,7 +31,12 @@
               <li class="nav-item">
                 <a class="nav-link" aria-disabled="true">Help</a>
               </li> -->
-               <button class="btn-started btn-started1">Get Started</button>
+              <li class="nav-item">
+                <a class="nav-link" href="#section3">
+                  <button class="btn-started btn-started1">Join our waitlist</button>
+                </a>
+              </li>
+               
             </ul>
             <!-- <ul class="d-flex mb-2 mb-lg-0">
               <button class="btn-started btn-started1">Get Started</button>
@@ -179,14 +184,14 @@
     </div>
   </section>
 
-   <section class="section3">
+   <section class="section3" id="section3">
     <div class="container">
             <div class="row moon-bg">
                 <div class="col-lg-6 col-md-12">
                     <div class="title title2">
                         <div>
                             <h6 style="text-align: left;">stay updated</h6>
-                            <h2 style="text-align: left;">Join our mailing list</h2>
+                            <h2 style="text-align: left;">Join our waitlist</h2>
                             <p style="width: 100%; text-align: left;">Stay ahead in the crypto payment revolution. Sign up for exclusive updates, early access to features, and tips on simplifying your transactions with Snappipay.</p>
                         </div>
   
@@ -278,75 +283,57 @@
   const items = document.querySelectorAll('.scroll-item');
   const totalItems = items.length;
   
-  // Function to check if mobile
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
+  // Check if mobile
+  const isMobile = window.innerWidth <= 768;
   
-  // Exit early on mobile
-  if (isMobile()) {
+  if (isMobile) {
+    // Show all items on mobile
+    items.forEach(item => item.classList.add('active'));
     return;
   }
   
   let currentIndex = 0;
   
   function updateItems() {
-    // Double check - don't run on mobile
-    if (isMobile()) return;
-    
-    const rect = section.getBoundingClientRect();
-    const sectionTop = rect.top;
-    const sectionHeight = rect.height;
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.offsetHeight;
     const viewportHeight = window.innerHeight;
     
-    if (sectionTop <= 0 && sectionTop > -(sectionHeight - viewportHeight)) {
+    // Check if section is in view
+    if (sectionTop <= 0 && sectionTop > -sectionHeight + viewportHeight) {
+      // Calculate progress through section (0 to 1)
       const progress = Math.abs(sectionTop) / (sectionHeight - viewportHeight);
+      
+      // Determine which item should be active
       const newIndex = Math.min(
         Math.floor(progress * totalItems),
         totalItems - 1
       );
       
+      // Update if index changed
       if (newIndex !== currentIndex) {
-        items.forEach((item, index) => {
-          item.classList.remove('active', 'previous', 'next');
-          
-          if (index === newIndex) {
-            item.classList.add('active');
-          } else if (index < newIndex) {
-            item.classList.add('previous');
-          } else {
-            item.classList.add('next');
-          }
+        // Remove classes from all items
+        items.forEach(item => {
+          item.classList.remove('active', 'previous');
         });
+        
+        // Add classes
+        if (currentIndex < newIndex) {
+          // Scrolling down
+          items[currentIndex].classList.add('previous');
+        }
+        items[newIndex].classList.add('active');
         
         currentIndex = newIndex;
       }
-    } else if (sectionTop > 0) {
-      items.forEach(item => item.classList.remove('active', 'previous', 'next'));
-      items[0].classList.add('active');
-      currentIndex = 0;
     }
   }
   
-  window.addEventListener('scroll', updateItems);
+  // Initial check
   updateItems();
   
-  // Handle window resize
-  let resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      if (isMobile()) {
-        // Remove all animation classes on mobile
-        items.forEach(item => {
-          item.classList.remove('active', 'previous', 'next');
-        });
-      } else {
-        // Reinitialize on desktop
-        updateItems();
-      }
-    }, 250);
-  });
+  // Update on scroll
+  window.addEventListener('scroll', updateItems);
 });
   </script>
   </body>
