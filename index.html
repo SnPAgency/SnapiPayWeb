@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnappiPay</title>
-    <script type="module" crossorigin src="/snappyPayWeb/assets/index-C7EovdoF.js"></script>
-    <link rel="stylesheet" crossorigin href="/snappyPayWeb/assets/index-BeIYn-zt.css">
+    <script type="module" crossorigin src="/SnapiPayWeb/assets/index-BPk99bQJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/SnapiPayWeb/assets/index-BemCpq8w.css">
   </head>
   <body>
 
@@ -14,7 +14,7 @@
        <!-- NavBar -->
        <nav class="navbar fixed-top navbar-expand-lg bg-body-transparent">
         <div class="container nav1">
-          <a class="navbar-brand" href="#"><img src="/snappyPayWeb/assets/Logo-D_xBzlGg.svg" alt="Logo"/></a>
+          <a class="navbar-brand" href="#"><img src="/SnapiPayWeb/assets/Logo-D_xBzlGg.svg" alt="Logo"/></a>
           
           <!-- <button class="navbar-toggler navbar-toggler-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,12 @@
               <li class="nav-item">
                 <a class="nav-link" aria-disabled="true">Help</a>
               </li> -->
-               <button class="btn-started btn-started1">Get Started</button>
+              <li class="nav-item">
+                <a class="nav-link" href="#section3">
+                  <button class="btn-started btn-started1">Join our waitlist</button>
+                </a>
+              </li>
+               
             </ul>
             <!-- <ul class="d-flex mb-2 mb-lg-0">
               <button class="btn-started btn-started1">Get Started</button>
@@ -74,7 +79,7 @@
           </div>
           <div class="col-md-6" >
               <div class="app-mockup">
-                <img class="img-fluid" src="/snappyPayWeb/assets/Mockuuups%20Free%20Transparent%20iPhone%20Air%20Mockup%201-Dj5RCJ5q.svg" alt="App Mockup"/>
+                <img class="img-fluid" src="/SnapiPayWeb/assets/Mockuuups%20Free%20Transparent%20iPhone%20Air%20Mockup%201-Dj5RCJ5q.svg" alt="App Mockup"/>
               </div>
           </div>
         </div>
@@ -130,7 +135,7 @@
         <div class="row mb-3 mb-md-4 mb-lg-5 scroll-item" data-index="0">
           <div class="col-md-6 col-sm-6">
             <div class="flag">
-              <img class="img-fluid" src="/snappyPayWeb/assets/Flag_map_of_Nigeria.svg%201-DrPSjrN8.svg" alt="Nig Flag"/>
+              <img class="img-fluid" src="/SnapiPayWeb/assets/Flag_map_of_Nigeria.svg%201-DrPSjrN8.svg" alt="Nig Flag"/>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -155,7 +160,7 @@
           </div>
           <div class="col-md-6 col-sm-6 order-1 order-sm-2">
             <div class="flag">
-              <img class="img-fluid" src="/snappyPayWeb/assets/vecteezy_kenya-flag-map-the-flag-of-the-country-in-the-form-of_6636801%201-DMyVfhII.svg" alt="Nig Flag"/>
+              <img class="img-fluid" src="/SnapiPayWeb/assets/vecteezy_kenya-flag-map-the-flag-of-the-country-in-the-form-of_6636801%201-DMyVfhII.svg" alt="Nig Flag"/>
             </div>
           </div>
         </div>
@@ -172,21 +177,21 @@
             </div>
           </div>
           <div class="map">
-            <img class="img-fluid" src="/snappyPayWeb/assets/Vector-D8m_3Vwo.svg" style="width: 100%;"/>
+            <img class="img-fluid" src="/SnapiPayWeb/assets/Vector-D8m_3Vwo.svg" style="width: 100%;"/>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-   <section class="section3">
+   <section class="section3" id="section3">
     <div class="container">
             <div class="row moon-bg">
                 <div class="col-lg-6 col-md-12">
                     <div class="title title2">
                         <div>
                             <h6 style="text-align: left;">stay updated</h6>
-                            <h2 style="text-align: left;">Join our mailing list</h2>
+                            <h2 style="text-align: left;">Join our waitlist</h2>
                             <p style="width: 100%; text-align: left;">Stay ahead in the crypto payment revolution. Sign up for exclusive updates, early access to features, and tips on simplifying your transactions with Snappipay.</p>
                         </div>
   
@@ -216,7 +221,7 @@
       <div class="row align-items-center mb-5">
         <div class="col-md-4 mb-3 mb-md-0">
           <div class="footer-logo">
-            <a class="navbar-brand" href="#"><img src="/snappyPayWeb/assets/Logo-D_xBzlGg.svg" alt="Logo"/></a>
+            <a class="navbar-brand" href="#"><img src="/SnapiPayWeb/assets/Logo-D_xBzlGg.svg" alt="Logo"/></a>
           </div>
           <p class="footer-tagline">The &nbsp; Future &nbsp; of &nbsp; Payments</p>
         </div> 
@@ -278,75 +283,57 @@
   const items = document.querySelectorAll('.scroll-item');
   const totalItems = items.length;
   
-  // Function to check if mobile
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
+  // Check if mobile
+  const isMobile = window.innerWidth <= 768;
   
-  // Exit early on mobile
-  if (isMobile()) {
+  if (isMobile) {
+    // Show all items on mobile
+    items.forEach(item => item.classList.add('active'));
     return;
   }
   
   let currentIndex = 0;
   
   function updateItems() {
-    // Double check - don't run on mobile
-    if (isMobile()) return;
-    
-    const rect = section.getBoundingClientRect();
-    const sectionTop = rect.top;
-    const sectionHeight = rect.height;
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.offsetHeight;
     const viewportHeight = window.innerHeight;
     
-    if (sectionTop <= 0 && sectionTop > -(sectionHeight - viewportHeight)) {
+    // Check if section is in view
+    if (sectionTop <= 0 && sectionTop > -sectionHeight + viewportHeight) {
+      // Calculate progress through section (0 to 1)
       const progress = Math.abs(sectionTop) / (sectionHeight - viewportHeight);
+      
+      // Determine which item should be active
       const newIndex = Math.min(
         Math.floor(progress * totalItems),
         totalItems - 1
       );
       
+      // Update if index changed
       if (newIndex !== currentIndex) {
-        items.forEach((item, index) => {
-          item.classList.remove('active', 'previous', 'next');
-          
-          if (index === newIndex) {
-            item.classList.add('active');
-          } else if (index < newIndex) {
-            item.classList.add('previous');
-          } else {
-            item.classList.add('next');
-          }
+        // Remove classes from all items
+        items.forEach(item => {
+          item.classList.remove('active', 'previous');
         });
+        
+        // Add classes
+        if (currentIndex < newIndex) {
+          // Scrolling down
+          items[currentIndex].classList.add('previous');
+        }
+        items[newIndex].classList.add('active');
         
         currentIndex = newIndex;
       }
-    } else if (sectionTop > 0) {
-      items.forEach(item => item.classList.remove('active', 'previous', 'next'));
-      items[0].classList.add('active');
-      currentIndex = 0;
     }
   }
   
-  window.addEventListener('scroll', updateItems);
+  // Initial check
   updateItems();
   
-  // Handle window resize
-  let resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      if (isMobile()) {
-        // Remove all animation classes on mobile
-        items.forEach(item => {
-          item.classList.remove('active', 'previous', 'next');
-        });
-      } else {
-        // Reinitialize on desktop
-        updateItems();
-      }
-    }, 250);
-  });
+  // Update on scroll
+  window.addEventListener('scroll', updateItems);
 });
   </script>
   </body>
