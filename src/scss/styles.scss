@@ -476,7 +476,7 @@ body {
 /* Section with extra height for scrolling */
 .scroll-section {
     position: relative;
-    height: 200vh; /* 4x viewport height for 4 rows */
+    height: 400vh; /* 4x viewport height for 4 rows */
   }
   
   /* Fixed content container */
@@ -830,7 +830,10 @@ body {
         margin-top: 50px;
       }
 
-      
+      .scroll-section {
+        position: relative;
+        height: 350vh; /* 4x viewport height for 4 rows */
+      }
 
      
 }
