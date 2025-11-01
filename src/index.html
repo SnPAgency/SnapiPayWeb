@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnappiPay</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="./scss/styles.scss">
     <script type="module" src="./js/main.js"></script>
   </head>
@@ -52,9 +53,11 @@
                     <h1>The Future of Payments,<br/> Crypto to Cash, Simplified</h1>
                     <p>Whether you're shopping, paying bills, or running a business, Snappipay provides a smooth, reliable solution to convert your crypto into fiat instantly.</p>
                     <div class="newsletter-container form1">
-                      <form class="newsletter-form " onsubmit="handleSubmit(event)">
+                      <form action="https://snappipay.substack.com/api/v1/free?nojs=true" 
+                      method="post" class="newsletter-form " >
                         <input 
                           type="email" 
+                          name="email"
                           class="email-input" 
                           placeholder="Enter your email address" 
                           required
@@ -200,9 +203,11 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="newsletter">
                         <div class="newsletter-container">
-                            <form class="newsletter-form" onsubmit="handleSubmit(event)">
+                            <form action="https://snappipay.substack.com/api/v1/free?nojs=true" 
+                            method="post" class="newsletter-form">
                               <input 
                                 type="email" 
+                                name="email"
                                 class="email-input" 
                                 placeholder="Enter your email address" 
                                 required
@@ -271,12 +276,7 @@
 
 
    <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const email = e.target.querySelector('.email-input').value;
-      alert(`Thank you for subscribing with: ${email}`);
-      e.target.reset();
-    }
+    
 
     document.addEventListener('DOMContentLoaded', function() {
   const section = document.querySelector('.scroll-section');
