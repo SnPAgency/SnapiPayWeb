@@ -1,7 +1,11 @@
 import { resolve } from 'path'
+import dotenv from 'dotenv'
+
+// Load environment variables
+dotenv.config({ path: '.env' })
 
 export default {
-  base: '/SnapiPayWeb/', // Add this - replace with your actual GitHub repo name
+  base: process.env.RENDER_PATH || '/SnapiPayWeb/', // Add this - replace with your actual GitHub repo name
   root: resolve(__dirname, 'src'),
   build: {
     outDir: '../dist'
