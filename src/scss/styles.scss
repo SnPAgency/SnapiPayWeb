@@ -98,6 +98,7 @@ body {
     vertical-align: middle;
     font-variant-numeric-zero: slashed-zero;
     color: #fff;
+    margin-bottom: 20px;
 
   }
 
@@ -110,6 +111,7 @@ body {
     letter-spacing: 0%;
     vertical-align: middle;
     color: #D1D5DB;
+    margin-bottom: 20px;
   }
 
 //   .headerText button{
@@ -544,7 +546,7 @@ body {
 
 @media all and (min-width: 992px){
     .title p{
-        width: 40%;
+        width: 30%;
         margin: auto;
     }
 
@@ -568,7 +570,7 @@ body {
         padding-left: calc(var(--bs-gutter-x) * 0.5);
         }
     .nav1{
-        border-radius: 30px;
+        border-radius: 70px;
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 20px;
@@ -596,14 +598,14 @@ body {
 
       .headerText h1{
         font-weight: 500;
-        font-size: 1.8rem;
+        font-size: 2.7rem;
         line-height: 130%;
         letter-spacing: -1px;
       }
 
       .headerText p{
         font-weight: 400;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 28px;
         letter-spacing: 0%;
       }
@@ -647,13 +649,13 @@ body {
     
 
       .title h2{
-        font-size: 30px;
+        font-size: 24px;
         line-height: 120%;
         letter-spacing: -1.5px;
     }
     
     .title p{
-        font-size: 15px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.3px;
         width: 60%;
@@ -662,7 +664,7 @@ body {
 
     .title h6{
        
-        font-size: 11px;
+        font-size: 14px;
         line-height: 20px;
         letter-spacing: 1.3px;
     }
@@ -680,14 +682,14 @@ body {
     
     .card h3{
         font-weight: 500;
-        font-size: 20px;
+        font-size: 24px;
         line-height: 140%;
         letter-spacing: 0px;
     
     }
     
     .card p{
-        font-size: 15px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.2px;
     
@@ -695,14 +697,14 @@ body {
 
     .flagCard h3{
         font-weight: 500;
-        font-size: 20px;
+        font-size: 24px;
         line-height: 140%;
         letter-spacing: 0px;
     
     }
     
     .flagCard p{
-        font-size: 15px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.2px;
     
@@ -759,17 +761,20 @@ body {
       }
 
       .title h2{
-        font-size: 25px;
+        font-size: 40px;
         line-height: 120%;
         letter-spacing: -1.5px;
     }
     
     .title p{
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.3px;
-        width: 60%;
+        width: 80%;
         margin: auto;
+    }
+    .title h6{
+      font-size: 14px;
     }
 
       .card img{
@@ -780,14 +785,14 @@ body {
     
     .card h3{
         font-weight: 500;
-        font-size: 18px;
+        font-size: 24px;
         line-height: 140%;
         letter-spacing: 0px;
     
     }
     
     .card p{
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.2px;
     
@@ -795,14 +800,14 @@ body {
 
     .flagCard h3{
         font-weight: 500;
-        font-size: 18px;
+        font-size: 24px;
         line-height: 140%;
         letter-spacing: 0px;
     
     }
     
     .flagCard p{
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         letter-spacing: -0.2px;
     
@@ -834,13 +839,24 @@ body {
         height: 350vh; /* 4x viewport height for 4 rows */
       }
 
+      .flag img{
+        height: auto;
+        width: 250px;
+    }
+
+    .map img{
+      height: auto !important;
+      width: 350px !important;
+    }
+      
+
      
 }
 
 @media (max-width: 575.98px){
     .container{
-    padding-right: calc(var(--bs-gutter-x) * 1.5);
-    padding-left: calc(var(--bs-gutter-x) * 1.5);
+    padding-right: calc(var(--bs-gutter-x) * 1);
+    padding-left: calc(var(--bs-gutter-x) * 1);
     }
 
     .nav1{
@@ -848,6 +864,8 @@ body {
         margin-left: calc(var(--bs-gutter-x) * 1.0);
         padding-top: 0px;
         padding-bottom: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .navbar-brand img{
         height: auto;
@@ -856,15 +874,17 @@ body {
 
     .headerText h1{
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 2.5rem;
         line-height: 130%;
         letter-spacing: -1px;
+        margin-bottom: 10px;
       }
       .headerText p{
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 28px;
         letter-spacing: 0%;
+        margin-bottom: 20px;
       }
 
       .multichain-logos .logos h5{
@@ -880,6 +900,7 @@ body {
       }
       .app-mockup{
         text-align: center;
+        margin-top: 20px;
        
       }
       .middleCard{
@@ -893,18 +914,21 @@ body {
     }
 
     .title h2{
-        font-size: 23px;
+        font-size: 40px;
         line-height: 120%;
         letter-spacing: -1.5px;
     }
 
     .flag img{
-        height: auto;
-        width: 150px;
-    }
+      height: auto;
+      width: 250px;
+  }
 
-   
-
+  .map img{
+    height: auto !important;
+    width: 280px !important;
+  }
+    
       .section1{
         margin-top: 30px;
       }
@@ -919,7 +943,12 @@ body {
     .btn-started1{
         margin-top: 7px;
     }
-     
+    .moon-bg{
+      padding: 0px 10px;
+    }
+     .scroll-content{
+      padding-top: 110px;
+     }
 }
 
 /* For 412px screens (e.g., Samsung Galaxy S20, Pixel 4) */
@@ -929,22 +958,22 @@ body {
     }
 
     .headerText h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         line-height: 125%;
     }
 
     .headerText p {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 26px;
     }
 
     .title h2 {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .title p {
-        font-size: 13px;
-        width: 70%;
+        font-size: 16px;
+        width: 80%;
     }
 
     .app-mockup img {
@@ -959,11 +988,14 @@ body {
     }
 
     .headerText h1 {
-        font-size: 1.45rem;
+        font-size: 2.45rem;
     }
 
     .title h2 {
-        font-size: 21px;
+        font-size: 38px;
+    }
+    .btn-started{
+      padding: 10px 10px;
     }
 
     .app-mockup img {
@@ -971,38 +1003,41 @@ body {
     }
 
     .card h3, .flagCard h3 {
-        font-size: 17px;
+        font-size: 24px;
     }
 
     .card p, .flagCard p {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
 /* For 360px screens (e.g., Samsung Galaxy S8/S9) */
 @media (max-width: 360px) {
-    .container {
-        padding-right: calc(var(--bs-gutter-x) * 1.2);
-        padding-left: calc(var(--bs-gutter-x) * 1.2);
-    }
+    // .container {
+    //     padding-right: calc(var(--bs-gutter-x) * 1.2);
+    //     padding-left: calc(var(--bs-gutter-x) * 1.2);
+    // }
 
     .nav1 {
-        margin-right: calc(var(--bs-gutter-x) * 0.8);
-        margin-left: calc(var(--bs-gutter-x) * 0.8);
+     
     }
 
     .navbar-brand img {
-        width: 105px;
+        width: 95px;
+    }
+    .btn-started{
+      font-size: 12px;
+      padding: 5px 8px;
     }
 
     .headerText h1 {
-        font-size: 1.4rem;
-        line-height: 120%;
+        font-size: 2rem;
+        line-height: 140%;
     }
 
     .headerText p {
-        font-size: 12.5px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 29px;
     }
 
     .multichain-logos .logos h5 {
@@ -1017,12 +1052,12 @@ body {
     }
 
     .title h2 {
-        font-size: 20px;
+        font-size: 28px;
         letter-spacing: -1.2px;
     }
 
     .title p {
-        font-size: 12.5px;
+        font-size: 14px;
         width: 75%;
     }
 
@@ -1040,11 +1075,11 @@ body {
     }
 
     .card h3, .flagCard h3 {
-        font-size: 16px;
+        font-size: 22px;
     }
 
     .card p, .flagCard p {
-        font-size: 12.5px;
+        font-size: 14px;
     }
 
     .flag img {
@@ -1056,13 +1091,16 @@ body {
         font-size: 14px;
     }
     .section1{
-        margin-top: 100px;
+        margin-top: 0px;
     }
     .section2{
-        margin-top: 50px;
+        margin-top: 0px;
     }
     .section2 .title {
         margin-bottom: 50px;
+    }
+    .scroll-content{
+      padding-top: 100px;
     }
 }
 
@@ -1237,7 +1275,7 @@ body {
 
 @media (max-width: 210px) {
     .navbar-brand img {
-        width: 70px;
+        width: 60px;
     }
 
     .navbar-toggler {
@@ -1250,8 +1288,14 @@ body {
     }
 
     .nav1 {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 5;
+        margin-left: 5;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .btn-started{
+        padding: 5px 5px;
+        font-size: 11px;
     }
 
     .navbar-collapse {
