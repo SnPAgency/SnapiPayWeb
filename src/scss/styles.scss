@@ -282,7 +282,16 @@ body {
     letter-spacing: -0.2px;
 
 }
-
+.flag img{
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+.map img{
+  width: auto;
+  height: 400px;
+  object-fit: contain;
+}
 .section2 .title{
     margin-bottom: 150px;
 }
@@ -485,12 +494,12 @@ body {
   .scroll-content {
     position: sticky;
     top: 0;
-    height: auto;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 0px;
     // padding: 80px 0; /* Adjust based on navbar height */
   }
   
@@ -522,6 +531,8 @@ body {
   .scroll-content .title {
     margin-bottom: 50px;
   }
+
+  
   
  
 
@@ -812,6 +823,12 @@ body {
         letter-spacing: -0.2px;
     
     }
+    .flagCard{
+      padding: 10px 0px
+    }
+    .card{
+      padding: 10px 0px
+    }
 
     .footer-links {
         // flex-direction: column;
@@ -840,14 +857,19 @@ body {
       }
 
       .flag img{
-        height: auto;
-        width: 250px;
-    }
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+      }
+      .map img{
+        width: auto;
+        height: 300px;
+        object-fit: contain;
+      }
 
-    .map img{
-      height: auto !important;
-      width: 350px !important;
-    }
+    .scroll-content{
+      padding-top: 0px;
+     }
       
 
      
@@ -920,14 +942,16 @@ body {
     }
 
     .flag img{
-      height: auto;
-      width: 250px;
-  }
-
-  .map img{
-    height: auto !important;
-    width: 280px !important;
-  }
+      width: auto;
+      height: 200px;
+      object-fit: contain;
+    }
+    .map img{
+      width: auto;
+      height: 180px !important;
+      object-fit: contain;
+    }
+ 
     
       .section1{
         margin-top: 30px;
@@ -944,10 +968,10 @@ body {
         margin-top: 7px;
     }
     .moon-bg{
-      padding: 0px 10px;
+      padding: 0px 0px;
     }
      .scroll-content{
-      padding-top: 110px;
+      padding-top: 0px;
      }
      .btn-started{
       padding: 10px 10px;
@@ -1011,6 +1035,19 @@ body {
 
     .card p, .flagCard p {
         font-size: 16px;
+    }
+    .flag img{
+      width: auto;
+      height: 200px;
+      object-fit: contain;
+    }
+    .map img{
+      width: auto;
+      height: 200px !important;
+      object-fit: contain;
+    }
+    .scroll-content{
+      padding-top: 20px;
     }
 }
 
@@ -1085,8 +1122,15 @@ body {
         font-size: 14px;
     }
 
-    .flag img {
-        width: 130px;
+    .flag img{
+      width: auto;
+      height: 150px;
+      object-fit: contain;
+    }
+    .map img{
+      width: auto;
+      height: 140px !important;
+      object-fit: contain;
     }
 
     .email-input, .subscribe-btn {
@@ -1103,7 +1147,7 @@ body {
         margin-bottom: 50px;
     }
     .scroll-content{
-      padding-top: 100px;
+      padding-top: 70px;
     }
 }
 
