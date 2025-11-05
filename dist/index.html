@@ -41,7 +41,8 @@
                     <h1>The Future of Payments,<br/> Crypto to Cash, Simplified</h1>
                     <p>Whether you're shopping, paying bills, or running a business, Snappipay provides a smooth, reliable solution to convert your crypto into fiat instantly.</p>
                     <div class="newsletter-container form1">
-                      <form action="http://localhost:8080/mailing-list/subscribe"  target="_blank"
+                      <form action="http://localhost:8080/mailing-list/subscribe"
+                          target="_self"
                           method="POST" 
                           class="newsletter-form">
                           <input 
@@ -196,7 +197,8 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="newsletter">
                         <div class="newsletter-container">
-                          <form action="http://localhost:8080/mailing-list/subscribe"  target="_blank"
+                          <form action="http://localhost:8080/mailing-list/subscribe"
+                          target="_self"
                           method="POST" 
                           class="newsletter-form">
                           <input 
@@ -272,6 +274,23 @@
 
    <script>
     
+//    const form = document.querySelector('.newsletter-form');
+//    form.addEventListener('submit', function(event) {
+//      event.preventDefault();
+//      const formData = new FormData(form);
+//
+//      fetch('http://localhost:8080/mailing-list/subscribe', {
+//        method: 'POST',
+//        body: formData
+//      })
+//      .then(response => response.json())
+//      .then(data => {
+//        console.log(data);
+//      })
+//      .catch(error => {
+//        console.error(error);
+//      });
+//    });
 
     document.addEventListener('DOMContentLoaded', function() {
   const section = document.querySelector('.scroll-section');
