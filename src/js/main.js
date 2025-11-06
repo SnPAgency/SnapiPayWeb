@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message.style.display = 'none';
         
         try {
-          const response = await fetch('http://localhost:8080/mailing-list/subscribe', {
+          const response = await fetch('https://snappipay.xyz/mailing-list/subscribe', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -93,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify({ email: email })
           });
           
-          const data = await response.json();
+          const data = await response.text();
           
           if (response.ok) {
-            message.textContent = data.message || '✅ Successfully subscribed!';
+            message.textContent = data || '✅ Successfully subscribed!';
             message.style.color = '#10b981';
             message.style.display = 'block';
             emailInput.value = '';
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
             
           } else {
-            message.textContent = data.message || '❌ Subscription failed. Please try again.';
+            message.textContent = data || '❌ Subscription failed. Please try again.';
             message.style.color = '#ef4444';
             message.style.display = 'block';
             
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
         } catch (error) {
           console.error('Error:', error);
-          message.textContent = '❌ Something went wrong. Please try again.';
+          message.textContent = error || '❌ Something went wrong. Please try again.';
           message.style.color = '#ef4444';
           message.style.display = 'block';
           
